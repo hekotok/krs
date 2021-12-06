@@ -1,0 +1,32 @@
+.Info img                               /* стиль для страницы материнской платы */
+{
+    float: left;
+    width: 40%;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#component
+{
+    width: 60%;
+    float: none;
+}
+
+.content a
+{
+    text-decoration: none;
+    color: black;
+}
+
+#logo
+{
+    width: 45%;
+    height: 200px;
+    float:none;
+}
+
+#flat
+{
+    width: 25%;
+    float:none;
+}

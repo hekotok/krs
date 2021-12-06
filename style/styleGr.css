@@ -1,0 +1,10 @@
+.content img                 /* стиль для страницы видеокарты*/
+{
+    float: left;
+    padding: 10px;
+}
+
+#im
+{
+    float: right;
+}

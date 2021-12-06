@@ -1,0 +1,44 @@
+@media screen and (max-width: 1050px) {                         /* общие стили для мобильных устройств */
+    section {
+        margin-top: 10%;
+    }
+    .begin {
+        font-size: 30px;
+    }
+    .card:hover .info a {
+        transform: translate3d(0px, 10px, 0px);
+        width: 100%;
+    }
+    .card {
+        width: 80%;
+        height: 65vmin;
+        margin: 10% 0;
+    }
+    header {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    #logo {        
+        margin-top: 12px;
+    }
+    
+    footer div {
+        width: 50px;
+        height: 50px;
+    }
+
+    footer span {
+        font-size: 10px;
+    }
+
+    @media (max-height: 900px) {
+        .card:hover img {
+            transform: scale(1);
+        }
+        .card:hover h1 {
+            opacity: 0;
+        }
+    }    
+}

@@ -1,0 +1,25 @@
+.Info img                    /* стиль для страницы процесс9ора*/
+{
+    float: left;
+    width: 25%;
+    height: auto;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#ir
+{
+    float: right;
+    width: 10%;
+}
+
+.name2 ol li
+{
+    padding: 10px;
+}
+
+#iva
+{
+    width: 50%;
+    float: none; 
+}

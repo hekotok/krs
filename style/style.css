@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {                                             /* общие стили  */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: rgb(39, 39, 39);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header,
+nav,
+section,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header {                                                                                        /* стили меню навигации */
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 1em 8em;
+    box-shadow: 0 5px 20px 5px rgb(0, 0, 0);
+    background: linear-gradient(45deg,  rgb(51, 51, 51), rgb(156, 156, 156));
+    z-index: 100;
+}
+#logo {
+    width: 100px;
+    transition: 0.3s;
+    transform: rotate(45deg);
+}
+#logo:hover {
+    transform: scale(1.2);
+}
+nav {
+    width: 70%;
+}
+nav a, nav label {
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 1em 2em;
+    border: 4px solid transparent;
+    cursor: pointer;
+    border-radius: 0.3em;
+    transition: 0.3s;
+}
+
+nav label {                                                                                                    /*  анимация кнопок */
+    border-radius: 0px;
+    background:
+        linear-gradient(45deg,  rgb(255, 255, 255), rgb(0, 0, 0)),
+        linear-gradient(180deg, rgb(0, 0, 0), rgb(255, 255, 255) 50%, rgb(0, 0, 0));
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 100% 200%;
+    background-position: 0 0, 0 100%;
+    background-origin: padding-box, border-box;
+    animation: highlight 1.3s infinite alternate;
+}
+
+input[type="checkbox"], nav label {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+nav li{
+    display: inline-block;
+    vertical-align: top;
+}
+
+nav label:hover, nav a:hover {
+    border-radius: 3px;
+    background:
+        linear-gradient(-45deg,  rgb(255, 255, 255), rgb(0, 0, 0)),
+        linear-gradient(180deg, rgb(0, 0, 0), rgb(255, 255, 255) 50%, rgb(0, 0, 0));
+    
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 100% 200%;
+    background-position: 0 0, 0 100%;
+    background-origin: padding-box, border-box;
+    animation: highlight 1.3s infinite alternate;
+}
+
+@keyframes highlight {
+    100% {
+        background-position: 0 0, 0 0;
+    }
+}
+
+section {                                                                       /* общие стили для контента */
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+}
+
+section div {
+    margin: 5% 0;
+}
+
+footer {                                                                        /* стили футера */
+    background: #161a20;
+    padding: 1em;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    background: rgb(47, 47, 47);
+    position: relative;
+	min-height: 100%;
+}
+
+footer div {
+    width: 6%;
+    height: 6%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+footer img {    
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.2);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1050px) {                             /* общие стили для мобильных устройств */
+    footer img:hover {
+        transform: scale(1.35);
+    }
+    header {
+        justify-content: center ;
+    }
+    nav {
+        width: 40%;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    nav label{
+        display: inline-block;
+        margin: 10px 0px;
+        padding: 2px 70%;
+    }
+    nav > ul {
+        display: none;
+    }
+    #logo-ref {
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ label + ul {
+        display: block;
+    }
+    input[type="checkbox"]:checked ~ label {
+        color: rgb(7, 4, 58);
+    }
+}
+
+
+body::-webkit-scrollbar {                                                       /* стили скроллбара */
+    width: 10px;
+    background: #00000000;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(30deg, rgb(252, 55, 235), rgb(56, 4, 77)); 
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(120deg, rgba(20, 6, 211, 0.486), rgb(111, 109, 218));
+}
+
+
+#toTop {                                                                        /* стили кнопки прокрутки к началу страницы */
+    width: 50px;
+    height: 35px;
+    border: 1px solid rgb(98, 0, 255);
+    background:linear-gradient(135deg, blue, violet);
+    color: black;
+    text-align:center;
+    padding: 3px;
+    position:fixed;
+    bottom:20px; /* отступ кнопки от нижнего края страницы*/
+    right:20px;
+    cursor:pointer;
+    display:none;
+    color:#333;
+    font-family:verdana;
+    font-size:11px;
+    z-index: 150;
+    border-radius: 10px;
+}
+
+#toTop img {
+    width: 30px;
+    height: 25px;
+}

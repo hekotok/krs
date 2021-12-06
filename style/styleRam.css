@@ -1,0 +1,15 @@
+#ssd                         /* стиль для страницы оперативной памяти */
+{
+    padding: 10px 0;
+}
+
+#story
+{
+    float: right;
+}
+
+#company
+{
+    width: 50%;
+    height: 100px;
+}
